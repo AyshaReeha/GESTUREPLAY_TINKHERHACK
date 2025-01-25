@@ -1,8 +1,8 @@
-# [GesturePlay] 🎯
+# GesturePlay 🎯
 
 
 ## Basic Details
-### Team Name: [HackTrio]
+### Team Name: HackTrio
 
 
 ### Team Members
@@ -14,26 +14,20 @@
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+The Gesture-Based Recovery Game is designed to assist individuals with motor diseases and other conditions requiring rehabilitation by offering a fun, interactive way to perform hand exercises. By using hand gestures to control the game's character, players can improve their hand mobility, coordination, and strength, all while engaging in a gamified experience.
 
 ### The Problem statement
-[What ridiculous problem are you solving?]
+This project aims to develop an interactive game using hand gesture recognition to assist individuals recovering from strokes and other physical disabilities. The game will provide a fun and accessible way for users to engage in rehabilitation exercises, helping them improve motor skills, coordination, and mobility through simple hand movements.
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+In this app, we solve the problem of controlling the game by using hand gestures, where the player can perform actions such as walking, running, or jumping based on the number of fingers raised, detected through a webcam feed processed by MediaPipe for real-time gesture recognition.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Languages used - python
+- Frameworks used - Pygame, MediaPipe
+- Libraries used - OpenCV, NumPy
 
 ### Implementation
 For Software:
