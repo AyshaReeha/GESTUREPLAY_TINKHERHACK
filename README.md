@@ -67,32 +67,23 @@ Hand Gesture Recognition: Uses MediaPipe for detecting raised fingers, interpret
 ![Screenshot 2025-01-25 184110](https://github.com/user-attachments/assets/98c61cf2-6628-4632-a117-e5b6903c7b29)
 ![Screenshot 2025-01-25 184224](https://github.com/user-attachments/assets/d2ab85c5-b701-4856-afb4-e565077dbecb)
 ![Screenshot 2025-01-25 184256](https://github.com/user-attachments/assets/0d7abf63-09e4-4c6d-a77c-62c2934cdf58)
+[Uploading Abhiiii.mhtml…]()
 
 
 # Build Photos
 ![Team](Add photo of your team here)
 
 
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
+https://drive.google.com/drive/folders/1Rnl0th3709rW_HVDeuQSN04k-_by3cNp
 
-
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- AMRUTHA PRASAD : 40 %
+- AYSHA REEHA E.V: 30 %
+- FIDHA FATHIMA: 30 %
 
 ---
 Made with ❤️ at TinkerHub
