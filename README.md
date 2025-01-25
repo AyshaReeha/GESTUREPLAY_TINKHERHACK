@@ -1,14 +1,14 @@
-# [Project Name] 🎯
+# [GesturePlay] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [HackTrio]
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: AMRUTHA PRASAD - RAJIV GANDHI INSTITUTE OF TECHNOLOGY
+- Member 2: AYSHA REEHA E V - RAJIV GANDHI INSTITUTE OF TECHNOLOGY
+- Member 3: FIDHA FATHIMA - RAJIV GANDHI INSTITUTE OF TECHNOLOGY
 
 ### Hosted Project Link
 [mention your project hosted project link here]
