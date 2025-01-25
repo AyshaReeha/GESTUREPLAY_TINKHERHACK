@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture-Based Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+        h1 {
+            color: #333;
+        }
+        #webcam {
+            width: 640px;
+            height: 480px;
+            border: 2px solid #555;
+            margin: 20px 0;
+        }
+        #controls {
+            margin: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gesture-Based Recovery Game</h1>
+    <video id="webcam" autoplay></video>
+    <div id="controls">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="status">Status: <span id="gesture">None</span></div>
+    <div id="score">Score: <span id="scoreValue">0</span></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+
+    <script>
+        const webcamElement = document.getElementById('webcam');
+        const gestureElement = document.getElementById('gesture');
+        const scoreElement = document.getElementById('scoreValue');
+
+        let model;
+        let score = 0;
+        let gesture = '';
+        let gameInterval;
+
+        async function loadModel() {
+            model = await handpose.load();
+            console.log("Handpose model loaded");
+        }
+
+        async function setupWebcam() {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            webcamElement.srcObject = stream;
+            return new Promise((resolve) => {
+                webcamElement.onloadedmetadata = () => {
+                    resolve();
+                };
+            });
+        }
+
+        function detectGesture(predictions) {
+            if (predictions.length > 0) {
+                const landmarks = predictions[0].landmarks;
+
+                const indexFingerRaised = landmarks[8][1] < landmarks[6][1];
+                const allFingersRaised = [4, 8, 12, 16, 20].every(
+                    (tip) => landmarks[tip][2] < landmarks[tip - 2][2]
+                );
+                const noFingersRaised = [4, 8, 12, 16, 20].every(
+                    (tip) => landmarks[tip][2] > landmarks[tip - 2][2]
+                );
+
+                if (indexFingerRaised) {
+                    return 'running';
+                } else if (allFingersRaised) {
+                    return 'jumping';
+                } else if (noFingersRaised) {
+                    return 'walking';
+                }
+            }
+            return '';
+        }
+
+        function updateScore() {
+            if (gesture === 'running') {
+                score += 2;
+            } else if (gesture === 'jumping') {
+                score += 5;
+            } else if (gesture === 'walking') {
+                score += 1;
+            }
+            scoreElement.innerText = score;
+        }
+
+        async function startGame() {
+    // Ensure the model and webcam are loaded before starting
+    if (!model || !webcamElement.srcObject) {
+        alert("Please wait for the model and webcam to load.");
+        return;
+    }
+
+    score = 0;
+    scoreElement.innerText = score;
+    gameInterval = setInterval(async () => {
+        const predictions = await model.estimateHands(webcamElement);
+        gesture = detectGesture(predictions);
+        gestureElement.innerText = gesture;
+        updateScore();
+    }, 500);
+
+    setTimeout(() => {
+        clearInterval(gameInterval);
+        alert(`Game Over! Your final score is: ${score}`);
+    }, 30000); // Game duration: 30 seconds
+}
+
+
+        async function init() {
+            await loadModel();
+            await setupWebcam();
+        }
+
+        init();
+    </script>
+</body>
+</html>
