@@ -84,8 +84,7 @@ Hand Gesture Recognition: Uses MediaPipe for detecting raised fingers, interpret
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+
 
 # Additional Demos
 [Add any extra demo materials/links]
