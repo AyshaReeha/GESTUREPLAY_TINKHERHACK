@@ -32,13 +32,36 @@ For Software:
 ### Implementation
 For Software:
 # Installation
-[commands]
+git clone <repository_url>
+
+cd <project_directory>
+
+pip install pygame opencv-python mediapipe
+
+pip install pygame
+pip install opencv-python
+pip install mediapipe
+
 
 # Run
-[commands]
+python game.py
+
 
 ### Project Documentation
-For Software:
+Overview
+The Gesture-Based Recovery Game is an interactive, gesture-controlled game aimed at assisting individuals with motor disabilities and other conditions requiring rehabilitation. The game uses hand gestures to control a character in the game, helping improve hand mobility, coordination, and strength in a fun and engaging way.
+
+Dependencies
+This game requires the following Python libraries:
+
+Pygame: For game graphics, sound, and user interface.
+OpenCV: For capturing and processing webcam images.
+MediaPipe: For hand gesture detection using the webcam feed.
+To install the necessary libraries, use the provided installation instructions in the previous section.
+
+Features
+Hand Gesture Recognition: Uses MediaPipe for detecting raised fingers, interpreting them as different actions such as walking, running, or jumping.
+
 
 # Screenshots (Add at least 3)
 ![Screenshot1](Add screenshot 1 here with proper name)
