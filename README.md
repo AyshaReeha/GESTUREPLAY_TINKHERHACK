@@ -69,20 +69,6 @@ Hand Gesture Recognition: Uses MediaPipe for detecting raised fingers, interpret
 ![Screenshot 2025-01-25 184256](https://github.com/user-attachments/assets/0d7abf63-09e4-4c6d-a77c-62c2934cdf58)
 
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
 # Build Photos
 ![Team](Add photo of your team here)
 
