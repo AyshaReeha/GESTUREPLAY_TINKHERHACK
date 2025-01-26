@@ -9,13 +9,13 @@ pygame.init()
 WIDTH, HEIGHT = 800, 600
 CHARACTER_WIDTH = 40
 CHARACTER_HEIGHT = 70
-OBSTACLE_IMAGE_PATH = "iceberg.jpg"
+OBSTACLE_IMAGE_PATH = "iceberg.png"
 OBSTACLE_WIDTH = 70
 OBSTACLE_HEIGHT = 80
 BACKGROUND_COLOR = (173, 216, 230)
-BACKGROUND_IMAGE_PATH = "BACKGROUND.jpeg"
+BACKGROUND_IMAGE_PATH = "background.jpeg"
 TEXT_COLOR = (0, 0, 0)
-CHARACTER_IMAGE_PATH = "penguin-clip-art-penguin-png-image.jpg"  # Path to your image file
+CHARACTER_IMAGE_PATH = "penguin.png"  # Path to your image file
 background_image = pygame.image.load(BACKGROUND_IMAGE_PATH)
 background_image = pygame.transform.scale(background_image, (WIDTH, HEIGHT))
 
